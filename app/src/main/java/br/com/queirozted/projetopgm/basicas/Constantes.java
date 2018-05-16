@@ -1,4 +1,4 @@
-package br.com.queirozted.projetopgm.basics;
+package br.com.queirozted.projetopgm.basicas;
 
 public interface Constantes {
     static final String KEY PESQUISA = "AIzaSyDVuvfkbRZHScyRpp8JqXqG6T2NAUFLU9U";

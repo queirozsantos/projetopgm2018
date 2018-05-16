@@ -1,4 +1,4 @@
-package br.com.queirozted.projetopgm.basics;
+package br.com.queirozted.projetopgm.basicas;
 
 import java.io.Serializable;
 
