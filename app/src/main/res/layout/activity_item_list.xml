@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="@dimen/alt_imagen">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:srcCompat="@mipmap/ic_launcher"
         android:id="@+id/img_place"
         android:scaleType="centerCrop"
         android:layout_alignBottom="@+id/linear"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentBottom="true" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -21,10 +21,9 @@
         android:id="@+id/linear"
         android:weightSum="1"
         android:background="#99FFFFFF"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="143dp">
+        android:layout_alignParentStart="true">
 
         <TextView
             android:text="TextView"
@@ -43,7 +42,7 @@
             android:layout_height="match_parent">
 
             <RatingBar
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/rating_placer"
                 android:maxHeight="@android:dimen/app_icon_size"
@@ -54,11 +53,9 @@
                 android:scaleX="0.5"
                 android:scaleY="0.5"
                 android:scrollbarDefaultDelayBeforeFade="300"
-                android:scrollbarSize="6dp"
-                android:layout_marginLeft="164dp"
-                android:layout_marginStart="164dp"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:scrollbarSize="7dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
 
             <ImageView
                 android:layout_width="wrap_content"
