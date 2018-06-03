@@ -1,7 +1,5 @@
 package br.com.queirozted.projetopgm.rotinas;
 
-import android.util.JsonReader;
-
 import br.com.queirozted.projetopgm.basicas.Constantes;
 import br.com.queirozted.projetopgm.basicas.Geometry;
 import br.com.queirozted.projetopgm.basicas.Photo;
@@ -14,17 +12,10 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class PesquisarPlace {
@@ -41,7 +32,7 @@ public class PesquisarPlace {
 
             JSONObject userObject;
             try {
-                userObject = new JSONObject(jsonData);
+                userObject = new JSONObject( jsonData);
                 return covertListComunicado(userObject);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -74,7 +65,7 @@ public class PesquisarPlace {
                             mPlace.setRating(0f);
                         }
 
-                        mPlace.setId(item.getString("id"));
+                        //mPlace.setId(item.getString("id"));
                         mPlace.setPlace_id(item.getString("place_id"));
 
                         try{
@@ -90,8 +81,8 @@ public class PesquisarPlace {
                         if (itemGeo != null) {
                             JSONObject itemloc = itemGeo.getJSONObject("location");
                             if (itemloc != null) {
-                                geo.setLocation_lat(itemloc.getLong("lat"));
-                                geo.setLocation_lng(itemloc.getLong("lng"));
+                                geo.setLocation_lat(Float.valueOf(itemloc.getString("lat")));
+                                geo.setLocation_lng(Float.valueOf(itemloc.getString("lng")));
                                 mPlace.setGeometry(geo);
                             }
                         }

@@ -1,5 +1,6 @@
 package br.com.queirozted.projetopgm.rotinas;
 
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import br.com.queirozted.projetopgm.basicas.Place;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+
 
 
 public class PlacesAdapter extends ArrayAdapter<Place> {
@@ -40,10 +42,10 @@ public class PlacesAdapter extends ArrayAdapter<Place> {
             vh.mIcone = (ImageView) convertView.findViewById(R.id.img_icone);
 
             convertView.setTag(vh);
-            Log.i("NGVL", "Novo Contexto - " + position);
+            //Log.i("NGVL", "Novo Contexto - " + position);
         } else {
             vh = (ViewHolder) convertView.getTag();
-            Log.i("NGVL", "Reutilizado Contexto - " + position);
+            //Log.i("NGVL", "Reutilizado Contexto - " + position);
         }
         vh.mTextNome.setText(place.getName());
         vh.mRating.setRating(place.getRating());

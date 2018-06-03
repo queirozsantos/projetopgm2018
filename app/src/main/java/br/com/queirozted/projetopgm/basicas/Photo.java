@@ -3,19 +3,10 @@ package br.com.queirozted.projetopgm.basicas;
 import java.io.Serializable;
 
 
-public class Photo implements Serializable {
-    String[]  html_attributions;
+public  class Photo implements Serializable {
     Long height;
     Long width;
     String photo_reference;
-
-    public String[] getHtml_attributions() {
-        return html_attributions;
-    }
-
-    public void setHtml_attributions(String[] html_attributions) {
-        this.html_attributions = html_attributions;
-    }
 
     public Long getHeight() {
         return height;

@@ -6,13 +6,11 @@ package br.com.queirozted.projetopgm.basicas;
 
 public class Place implements Serializable {
     private String name;
-    private String[] type;
     private String formatted_address;
     private Geometry geometry;
     private Float rating;
     private String icon;
     private String reference;
-    private String id;
     private Integer price_level;
     private String  place_id;
     private Photo photo;
@@ -39,14 +37,6 @@ public class Place implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String[] getType() {
-        return type;
-    }
-
-    public void setType(String[] type) {
-        this.type = type;
     }
 
     public String getFormatted_address() {
@@ -89,14 +79,6 @@ public class Place implements Serializable {
         this.reference = reference;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public Integer getPrice_level() {
         return price_level;
     }
@@ -113,3 +95,4 @@ public class Place implements Serializable {
         this.place_id = place_id;
     }
 }
+

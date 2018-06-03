@@ -69,6 +69,8 @@ public class ListPlaceFragment extends ListFragment implements SearchView.OnQuer
     public boolean onQueryTextSubmit(String query) {
         Bundle bundle = new Bundle();
         bundle.putString("textoPesquisa",query);
+        setListShown(false);
+
         mLoaderManager.restartLoader(LOADER_ID,bundle,this);
         return true;
     }
@@ -92,15 +94,13 @@ public class ListPlaceFragment extends ListFragment implements SearchView.OnQuer
     public void onLoadFinished(Loader<List<Place>> loader, List<Place> data) {
         int registros = 0;
         if (data != null){
-            Log.i("RAST","places validas");
+            //Log.i("RAST","places validas");
             setListAdapter(new PlacesAdapter(getActivity(), data));
             registros = data.size();
         }
         setListShown(true);
-        if (registros>0) {
-            Toast.makeText(getActivity(), String.format("Total de Localizacoes : %d ", registros), Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getActivity(), "Nenhum Registro Localizado", Toast.LENGTH_SHORT).show();
+        if (registros==0){
+            Toast.makeText(getActivity(), getResources().getString(R.string.msg_noloc), Toast.LENGTH_SHORT).show();
         }
     }
 

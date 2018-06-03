@@ -3,11 +3,10 @@ package br.com.queirozted.projetopgm.rotinas;
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 
-import br.com.queirozted.projetopgm.basicas.Place;
+import com.example.roberto.projetounibratec.basicas.Place;
 
 import java.io.IOException;
 import java.util.List;
-
 
 
 public class BuscaTaskLoader extends AsyncTaskLoader<List<Place>>{

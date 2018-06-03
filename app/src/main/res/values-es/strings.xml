@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lugares del Mundo</string>
+    <string name="titulo_pesquisa">Ubicaciones de Búsqueda</string>
+    <string name="aba_1">Tus Favoritos</string>
+    <string name="aba_2">Lista de Lugares</string>
+    <string name="title_activity_detalhe_place">.</string>
+    <string name="msg_noloc">No hay Registro Localizado</string>
+    <string name="loc_remove">Lugar eliminado de tus favoritos!</string>
+    <string name="loc_add">Parabenos, lugar añadieron a sus favoritos!</string>
+</resources>
