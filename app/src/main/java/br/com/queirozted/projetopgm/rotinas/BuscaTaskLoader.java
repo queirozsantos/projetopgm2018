@@ -3,7 +3,7 @@ package br.com.queirozted.projetopgm.rotinas;
 import android.content.Context;
 import android.support.v4.content.AsyncTaskLoader;
 
-import com.example.roberto.projetounibratec.basicas.Place;
+import br.com.queirozted.projetopgm.basicas.Place;
 
 import java.io.IOException;
 import java.util.List;
