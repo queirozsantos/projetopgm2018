@@ -22,7 +22,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_alignParentBottom="true"
-        android:foreground="@color/colorPrimaryDark"
         app:srcCompat="@android:drawable/ic_menu_revert"
         app:backgroundTint="@android:color/holo_blue_light" />
 
